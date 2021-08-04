@@ -157,7 +157,7 @@ def run(weights='yolov5s.pt',  # model.pt path(s)
                         c = int(cls)  # integer class
                         label = None if hide_labels else (names[c] if hide_conf else f'{names[c]} {conf:.2f}')
                         bbox_var = plot_one_box(xyxy, im0, label=label, color=colors(c, True), line_thickness=line_thickness)
-                        if(names[c] == "0" or names[c] == "1"):
+                        if(names[c] == "0" or names[c] == "2"):
                           save_one_box(xyxy, imc, file=save_dir / 'intruders' / f'{p.stem}.jpg', BGR=True)
 
             # Print time (inference + NMS)
